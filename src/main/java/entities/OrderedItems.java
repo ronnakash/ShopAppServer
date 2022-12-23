@@ -4,8 +4,7 @@
  */
 package entities;
 
-import com.openuproject.shopappserver.dtos.EntityDto;
-import com.openuproject.shopappserver.dtos.OrderedItemsDto;
+import dtos.OrderedItemsDto;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;

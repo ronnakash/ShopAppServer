@@ -4,10 +4,9 @@
  */
 package entities;
 
-import com.openuproject.shopappserver.dtos.EntityDto;
-import com.openuproject.shopappserver.dtos.UserDto;
-import java.io.Serializable;
-import java.util.Collection;
+import dtos.EntityDto;
+import dtos.UserDto;
+
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;

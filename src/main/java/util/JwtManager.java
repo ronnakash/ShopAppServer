@@ -4,7 +4,7 @@
  */
 package util;
 
-import com.openuproject.shopappserver.dtos.UserDto;
+import dtos.UserDto;
 import exceptions.AuthorizationException;
 import io.github.cdimascio.dotenv.Dotenv;
 import io.jsonwebtoken.Claims;

@@ -4,14 +4,12 @@
  */
 package entities;
 
-import com.openuproject.shopappserver.dtos.CategoryDto;
-import com.openuproject.shopappserver.dtos.EntityDto;
-import com.openuproject.shopappserver.dtos.ItemDto;
-import com.openuproject.shopappserver.repositories.CategoryRepository;
-import com.openuproject.shopappserver.repositories.ShopEntityManagerFactory;
+import dtos.CategoryDto;
+import dtos.EntityDto;
+import dtos.ItemDto;
+import repositories.ShopEntityManagerFactory;
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.stream.Collectors;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

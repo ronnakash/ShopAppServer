@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.openuproject.shopappserver.repositories;
+package repositories;
 
-import com.openuproject.shopappserver.dtos.EntityDto;
-import com.openuproject.shopappserver.dtos.UserDto;
+import dtos.EntityDto;
+import dtos.UserDto;
 import entities.User;
 import java.util.List;
 import javax.persistence.TypedQuery;

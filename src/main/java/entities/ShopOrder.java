@@ -4,8 +4,8 @@
  */
 package entities;
 
-import com.openuproject.shopappserver.dtos.EntityDto;
-import com.openuproject.shopappserver.dtos.OrderDto;
+import dtos.EntityDto;
+import dtos.OrderDto;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
@@ -26,7 +26,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
-import com.openuproject.shopappserver.repositories.ShopEntityManagerFactory;
+import repositories.ShopEntityManagerFactory;
 import javax.persistence.EntityManager;
 
 

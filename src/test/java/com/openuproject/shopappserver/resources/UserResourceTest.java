@@ -4,15 +4,11 @@
  */
 package com.openuproject.shopappserver.resources;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.openuproject.shopappserver.dtos.AuthenticationDto;
-import com.openuproject.shopappserver.dtos.EntityDto;
-import com.openuproject.shopappserver.dtos.UserDto;
-import com.openuproject.shopappserver.repositories.UserRepository;
+import dtos.EntityDto;
+import dtos.UserDto;
 import entities.User;
 import java.util.List;
-import javax.ws.rs.core.Response;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;

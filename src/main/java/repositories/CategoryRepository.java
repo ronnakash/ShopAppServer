@@ -2,14 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.openuproject.shopappserver.dtos;
+package repositories;
 
-import java.io.Serializable;
+import entities.Category;
 
 /**
  *
  * @author ronna
  */
-public interface Dto extends Serializable{
+public class CategoryRepository extends RepositoryAbst<Category>{
+    
+    public CategoryRepository(){
+        super("Category", Category.class);
+    }
+        
     
 }

@@ -6,7 +6,7 @@ package com.openuproject.shopappserver.resources;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.openuproject.shopappserver.dtos.AuthenticationDto;
+import dtos.AuthenticationDto;
 import javax.ws.rs.core.Response;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;

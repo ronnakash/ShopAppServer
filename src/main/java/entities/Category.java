@@ -4,8 +4,8 @@
  */
 package entities;
 
-import com.openuproject.shopappserver.dtos.CategoryDto;
-import com.openuproject.shopappserver.dtos.EntityDto;
+import dtos.CategoryDto;
+import dtos.EntityDto;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
