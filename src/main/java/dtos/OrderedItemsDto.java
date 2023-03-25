@@ -8,49 +8,48 @@ import entities.Item;
 import entities.OrderedItems;
 
 /**
- *
  * @author ronna
  */
-public class OrderedItemsDto implements Dto{
-    private Integer quantity;
-    private Integer orderId;
-    private ItemDto item;
-    
-    public OrderedItemsDto(Integer orderId, Item item, Integer quantity){
-        this.orderId = orderId;
-        this.item = new ItemDto(item);
-        this.quantity = quantity;
-    }
-            
-    public OrderedItemsDto(OrderedItems orderedItems){
-        this(orderedItems.getOrderedItemsPK().getOrderId(), orderedItems.getItem(), orderedItems.getQuantity());
-    }
+public class OrderedItemsDto implements Dto {
+	private final Integer quantity;
+	private final Integer orderId;
+	private final ItemDto item;
 
-    protected OrderedItemsDto(Integer orderId, Integer itemId, Integer quantity){
-        this.orderId = orderId;
-        this.item = new ItemDto(itemId);
-        this.quantity = quantity;
-    }
-    
-    public Integer getQuantity() {
-        return quantity;
-    }
+	public OrderedItemsDto(Integer orderId, Item item, Integer quantity) {
+		this.orderId = orderId;
+		this.item = new ItemDto(item);
+		this.quantity = quantity;
+	}
 
-    public Integer getOrderId() {
-        return orderId;
-    }
+	public OrderedItemsDto(OrderedItems orderedItems) {
+		this(orderedItems.getOrderedItemsPK().getOrderId(), orderedItems.getItem(), orderedItems.getQuantity());
+	}
 
-    public ItemDto getItem() {
-        return item;
-    }
-    
-    public OrderedItems toEntity() {
-        return new OrderedItems(this);
-    }
+	protected OrderedItemsDto(Integer orderId, Integer itemId, Integer quantity) {
+		this.orderId = orderId;
+		this.item = new ItemDto(itemId);
+		this.quantity = quantity;
+	}
 
-    public static OrderedItemsDto shallowCopy(OrderedItems orderedItems){
-        return new OrderedItemsDto(orderedItems.getOrderedItemsPK().getOrderId(),
-                orderedItems.getOrderedItemsPK().getItemId(), orderedItems.getQuantity());
-    }
-    
+	public static OrderedItemsDto shallowCopy(OrderedItems orderedItems) {
+		return new OrderedItemsDto(orderedItems.getOrderedItemsPK().getOrderId(),
+				orderedItems.getOrderedItemsPK().getItemId(), orderedItems.getQuantity());
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public Integer getOrderId() {
+		return orderId;
+	}
+
+	public ItemDto getItem() {
+		return item;
+	}
+
+	public OrderedItems toEntity() {
+		return new OrderedItems(this);
+	}
+
 }

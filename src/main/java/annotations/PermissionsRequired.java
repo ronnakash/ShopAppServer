@@ -4,20 +4,19 @@
  */
 package annotations;
 
+import javax.ws.rs.NameBinding;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import javax.ws.rs.NameBinding;
 
 /**
- *
  * @author ronna
  */
 
 @NameBinding
-@Target({ ElementType.TYPE, ElementType.METHOD })
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface PermissionsRequired {
-    String[] requiredPermissions() default {"User", "Admin"};
-};
+	String[] requiredPermissions() default {"User", "Admin"};
+}

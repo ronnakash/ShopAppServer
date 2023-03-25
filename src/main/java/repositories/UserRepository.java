@@ -7,41 +7,40 @@ package repositories;
 import dtos.EntityDto;
 import dtos.UserDto;
 import entities.User;
-import java.util.List;
+
 import javax.persistence.TypedQuery;
+import java.util.List;
 
 /**
- *
  * @author ronna
  */
-public class UserRepository extends RepositoryAbst<User>  {
-    TypedQuery<User> findByUsernameQuery;
-    
-    public UserRepository() {
-        super("User", User.class);
-        this.findByUsernameQuery = entityManager.createNamedQuery("User.findByUsername", User.class);
-    }
+public class UserRepository extends RepositoryAbst<User> {
+	TypedQuery<User> findByUsernameQuery;
 
-    
-    public EntityDto<User> getByUsername(String username){
-        List<User> users =  findByUsernameQuery
-                .setParameter("username", username)
-                .getResultList();
-        if (users.size() != 1)
-            return null;
-        return users.get(0).toDto();
-    }
-    
-    public boolean isUsernameTaken(String username){
-        return getByUsername(username) != null;
-    }
-    
+	public UserRepository() {
+		super("User", User.class);
+		this.findByUsernameQuery = entityManager.createNamedQuery("User.findByUsername", User.class);
+	}
 
-    @Override
-    public EntityDto<User> update(EntityDto<User> dto) {
-        return ((UserDto) super.update(dto)).hidePassword();
-    }
 
-    
-    
+	public EntityDto<User> getByUsername(String username) {
+		List<User> users = findByUsernameQuery
+				.setParameter("username", username)
+				.getResultList();
+		if (users.size() != 1)
+			return null;
+		return users.get(0).toDto();
+	}
+
+	public boolean isUsernameTaken(String username) {
+		return getByUsername(username) != null;
+	}
+
+
+	@Override
+	public EntityDto<User> update(EntityDto<User> dto) {
+		return ((UserDto) super.update(dto)).hidePassword();
+	}
+
+
 }

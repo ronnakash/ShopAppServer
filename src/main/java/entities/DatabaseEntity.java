@@ -5,16 +5,16 @@
 package entities;
 
 import dtos.EntityDto;
+
 import java.io.Serializable;
 
 /**
- *
  * @author ronna
  */
 public interface DatabaseEntity extends Serializable {
-    
-    public EntityDto toDto();
-    
-    public void update(EntityDto dto);
-    
+
+	EntityDto toDto();
+
+	void update(EntityDto dto);
+
 }

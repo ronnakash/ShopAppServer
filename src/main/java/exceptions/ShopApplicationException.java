@@ -8,36 +8,33 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 
 /**
- *
  * @author ronna
  */
-public abstract class ShopApplicationException extends WebApplicationException{
-    
-    public ShopApplicationException(){
-        this((Throwable) null);
-    }
-    
-    public ShopApplicationException(Throwable e){
-        this("Unexpected Error!", e, 500);
-    }
-    
-    public ShopApplicationException(String message){
-        this(message, (Throwable) null);
-    }
-        
-    public ShopApplicationException(String message, Throwable e, int status){
-        super(e, Response.status(status).entity(message).build());
-    }
-   
-    public ShopApplicationException(String message, Throwable e){
-        this(message, e, 500);
-    }
-    
-        public ShopApplicationException(String message, int status){
-        this(message, (Throwable) null, status);
-    }
+public abstract class ShopApplicationException extends WebApplicationException {
+
+	public ShopApplicationException() {
+		this((Throwable) null);
+	}
+
+	public ShopApplicationException(Throwable e) {
+		this("Unexpected Error!", e, 500);
+	}
+
+	public ShopApplicationException(String message) {
+		this(message, null);
+	}
+
+	public ShopApplicationException(String message, Throwable e, int status) {
+		super(e, Response.status(status).entity(message).build());
+	}
+
+	public ShopApplicationException(String message, Throwable e) {
+		this(message, e, 500);
+	}
+
+	public ShopApplicationException(String message, int status) {
+		this(message, null, status);
+	}
 
 
-        
-    
 }

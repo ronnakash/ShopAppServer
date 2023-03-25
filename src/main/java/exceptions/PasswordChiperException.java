@@ -4,19 +4,16 @@
  */
 package exceptions;
 
-import javax.ws.rs.WebApplicationException;
-
 /**
- *
  * @author ronna
  */
-public class PasswordChiperException extends ShopApplicationException{
-    
-    public PasswordChiperException(Throwable e){
-        this("Error while encrypting/decrypting password", e);
-    }
-    
-    public PasswordChiperException(String message, Throwable e){
-        super(message, e);
-    }
+public class PasswordChiperException extends ShopApplicationException {
+
+	public PasswordChiperException(Throwable e) {
+		this("Error while encrypting/decrypting password", e);
+	}
+
+	public PasswordChiperException(String message, Throwable e) {
+		super(message, e);
+	}
 }

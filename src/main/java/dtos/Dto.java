@@ -7,9 +7,8 @@ package dtos;
 import java.io.Serializable;
 
 /**
- *
  * @author ronna
  */
-public interface Dto extends Serializable{
-    
+public interface Dto extends Serializable {
+
 }

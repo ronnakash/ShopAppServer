@@ -8,25 +8,24 @@ import entities.DatabaseEntity;
 
 
 /**
- *
  * @author ronna
  */
 public abstract class EntityDto<T extends DatabaseEntity> implements Dto {
-    protected Integer id;
-    
-    protected EntityDto(Integer id){
-        this.id = id;
-    }
-    
-    public Integer getId() {
-        return id;
-    }
-    
-    protected void setId(int id){
-        this.id = id;
-    }
-    
-    public abstract T toEntity();
-    
-    
+	protected Integer id;
+
+	protected EntityDto(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	protected void setId(int id) {
+		this.id = id;
+	}
+
+	public abstract T toEntity();
+
+
 }

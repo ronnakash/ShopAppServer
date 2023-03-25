@@ -5,17 +5,16 @@
 package exceptions;
 
 /**
- *
  * @author ronna
  */
-public class UsernameTakenException extends ShopApplicationException{
+public class UsernameTakenException extends ShopApplicationException {
 
-    public UsernameTakenException(String message){
-        this(message, (Throwable) null);
-    }
-    
-    public UsernameTakenException(String message, Throwable e) {
-        super(message, e, 400);
-    }
-    
+	public UsernameTakenException(String message) {
+		this(message, null);
+	}
+
+	public UsernameTakenException(String message, Throwable e) {
+		super(message, e, 400);
+	}
+
 }

@@ -9,21 +9,20 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 /**
- *
  * @author ronna
  */
 public class ShopEntityManagerFactory {
-        private static EntityManagerFactory emf = null;
-    
-    public static EntityManagerFactory getEntityManagerFactory() {
-        if (emf == null)
-            emf = Persistence.createEntityManagerFactory("com.testProject_ShopAppServer_war_1.0PU");
-        return emf;
-    }
-    
-    public static EntityManager getEntityManager() {
-        if (emf == null)
-            emf = Persistence.createEntityManagerFactory("com.testProject_ShopAppServer_war_1.0PU");
-        return emf.createEntityManager();
-    }
+	private static EntityManagerFactory emf = null;
+
+	public static EntityManagerFactory getEntityManagerFactory() {
+		if (emf == null)
+			emf = Persistence.createEntityManagerFactory("com.testProject_ShopAppServer_war_1.0PU");
+		return emf;
+	}
+
+	public static EntityManager getEntityManager() {
+		if (emf == null)
+			emf = Persistence.createEntityManagerFactory("com.testProject_ShopAppServer_war_1.0PU");
+		return emf.createEntityManager();
+	}
 }

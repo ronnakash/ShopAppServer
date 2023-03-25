@@ -6,6 +6,7 @@ package repositories;
 
 import dtos.EntityDto;
 import entities.DatabaseEntity;
+
 import java.util.List;
 
 /**
@@ -14,15 +15,15 @@ import java.util.List;
  */
 public interface Repository<T extends DatabaseEntity> {
     
-    public List<EntityDto<T>> readAll();
+    List<EntityDto<T>> readAll();
     
-    public EntityDto<T> create(EntityDto<T> tDto);
+    EntityDto<T> create(EntityDto<T> tDto);
     
-    public EntityDto<T> read(int id);
+    EntityDto<T> read(int id);
     
-    public EntityDto<T> update(EntityDto<T> tDto);
+    EntityDto<T> update(EntityDto<T> tDto);
     
-    public EntityDto<T> delete(EntityDto<T> tDto);
+    EntityDto<T> delete(EntityDto<T> tDto);
 
     T readLazy(int id);
 }

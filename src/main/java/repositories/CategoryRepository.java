@@ -7,14 +7,13 @@ package repositories;
 import entities.Category;
 
 /**
- *
  * @author ronna
  */
-public class CategoryRepository extends RepositoryAbst<Category>{
-    
-    public CategoryRepository(){
-        super("Category", Category.class);
-    }
-        
-    
+public class CategoryRepository extends RepositoryAbst<Category> {
+
+	public CategoryRepository() {
+		super("Category", Category.class);
+	}
+
+
 }

@@ -8,18 +8,17 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 
 /**
- *
  * @author ronna
  */
 public class UnhandledExceptionMapper implements ExceptionMapper<Exception> {
-    
-    @Override
-    public Response toResponse(Exception exception) {
-        String message = exception.getMessage();
-        return Response
-                .serverError()
-                .entity(message)
-                .build();   
-    }
-    
+
+	@Override
+	public Response toResponse(Exception exception) {
+		String message = exception.getMessage();
+		return Response
+				.serverError()
+				.entity(message)
+				.build();
+	}
+
 }
